@@ -17,6 +17,7 @@ const isValidSudoku = (board) => {
   board.forEach((row, index) => {
     row.map((d) => {
       /* :: check if value is a letter ::*/
+
       const reg = /^-?\d*\.?\d*$/;
       if (!d.match(reg)) {
         validCounter += 1;
