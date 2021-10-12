@@ -12,6 +12,8 @@ const isValidSudoku = (board) => {
 
   let validCounter = 0;
 
+  /*:: validation for the input should not accept alphabets ::*/
+
   board.forEach((row, index) => {
     row.map((d) => {
       /* :: check if value is a letter ::*/
