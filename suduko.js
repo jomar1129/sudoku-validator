@@ -24,7 +24,11 @@ const isValidSudoku = (board) => {
     });
   });
 
-  if (validCounter === 0) {
+  /* :: if validCounter is equals to 0 proceed if more than 0 return false automatically ::*/
+
+  if (validCounter > 0) {
+    return false;
+  } else {
     board.forEach((row, rowIndex) => {
       /* :: push if row is validated ::*/
 
@@ -74,8 +78,6 @@ const isValidSudoku = (board) => {
     });
 
     return validated.every((value) => value === true);
-  } else {
-    return false;
   }
 };
 
