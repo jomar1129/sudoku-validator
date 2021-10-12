@@ -17,7 +17,6 @@ const isValidSudoku = (board) => {
       /* :: check if value is a letter ::*/
       var reg = /^-?\d*\.?\d*$/;
       if (!d.match(reg)) {
-        console.log(d);
         validCounter += 1;
       }
     });
@@ -74,7 +73,7 @@ const isValidSudoku = (board) => {
 
     return validated.every((value) => value === true);
   } else {
-    return "Can't Accept Letters on input";
+    return false;
   }
 };
 
