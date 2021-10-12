@@ -17,7 +17,7 @@ const isValidSudoku = (board) => {
   board.forEach((row, index) => {
     row.map((d) => {
       /* :: check if value is a letter ::*/
-      var reg = /^-?\d*\.?\d*$/;
+      const reg = /^-?\d*\.?\d*$/;
       if (!d.match(reg)) {
         validCounter += 1;
       }
@@ -71,7 +71,7 @@ const isValidSudoku = (board) => {
     /* :: to check if the grid has the correct inputs ::*/
     // test purposes
 
-    //   console.table(grids);
+    // console.table(grids);
 
     grids.forEach((grid) => {
       validated.push(isEmpty(grid));
