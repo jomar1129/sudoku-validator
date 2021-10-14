@@ -2,7 +2,7 @@
 
 const isEmpty = (array) => {
   /* :: Filter out Empty Spaces of the array :: */
-  const digits = array.filter((character) => character !== ".");
+  const digits = array.filter((character) => character !== "");
   return digits.length === [...new Set(digits)].length;
 };
 
